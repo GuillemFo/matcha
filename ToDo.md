@@ -32,7 +32,7 @@
 - Online status (in app)
 
 
-- Email recovery and email notifications
+- Email verify, recovery and email notifications
 - Notifications settings?
 
 - Permissions, report accounts, block accounts and navigation
