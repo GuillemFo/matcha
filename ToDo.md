@@ -1,6 +1,12 @@
 - Install vite ->Done
 - Prepare dockers for front ->Done
 
+
+- Register -> pending scripts
+- Login -> pending scripts
+- Edit profile -> pending scripts and other options like age, preferences, tags, gender (to be explored)
+
+
 - Profile preview
 - Profile preview other users + Like | Unlike | Disconect (Unmatch)
 - Users must be able to see:
@@ -11,9 +17,11 @@
 
 - GPS opt-in opt-out and manaully set location
 
+
 - Match system:
 - List of suggested profiles:
 	- Suggested profiles must be sortable by age, location, “fame rating”, and common tags.
+
 
 - Browser:
 - Users must be able to perform an advanced search by selecting one or more criteria, such as:
@@ -28,6 +36,7 @@
 - Investigate socket.io
 - Investigate how to create a chat
 
+
 - Notifications (in app)
 - Online status (in app)
 
@@ -35,9 +44,12 @@
 - Email verify, recovery and email notifications
 - Notifications settings?
 
+
 - Permissions, report accounts, block accounts and navigation
 
+
 - Responsive
+
 
 - Bonus:
 - Add OmniAuth strategies for user authentication
