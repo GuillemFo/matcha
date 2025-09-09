@@ -5,14 +5,14 @@
 
 export interface Profile
 {
-	id: number;
-	username: string;
+	id: string; //UUID?
+	username: string; // dont know if will be needed since we can use names and just use email for register and login
 	email: string;
 	name: string;
 	lastname1: string;
 	lastname2: string;
 	gender: 'male' | 'female' | 'non-binary' | 'not-specified';
-	preferences: ;
+	preferences: 'male' | 'female' | 'bisexual';
 	profpic?: string;
 	images?: string[];
 	bio?: string;

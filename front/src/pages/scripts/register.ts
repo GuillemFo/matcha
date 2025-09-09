@@ -39,21 +39,18 @@ function renderRegisterForm()
 	const email_error_wrapper = createDiv("mb-1 h-4");
 	const email_error = createSpan("", "email-error-check", "text-red-500 animate-fade-in text-xs italic hidden");
 	
-	//
-	const user_div = createDiv("mb-4");
-	const user_label = createLab("Username", "username", "block text-blue font-bold mb-2");
-	const user_input = createInp("example username", "text", "user", "username", "box-blue text-gray-500 border rounded w-full py-2 px-3 leading-tight focus:outline-none");
-	user_input.setAttribute("required", "");
-	
-	const user_error_wrapper = createDiv("mb-1 h-4");
-	const user_error = createSpan("", "user-error-check", "text-red-500 text-xs animate-fade-in italic hidden");
-	
+		
 	//
 	const pass_div = createDiv("");
 	const pass_label = createLab("Password", "password", "block text-blue font-bold mb-2");
 	const pass_input = createInp("", "password", "pass", "password", "box-blue text-gray-500 shadow border rounded w-full py-2 px-3 leading-tight focus:outline-none");
 	pass_input.setAttribute("required", "");
 	
+
+	const passrep_div = createDiv("");
+	const passrep_input = createInp("repeat password", "password", "pass", "password", "box-blue text-gray-500 shadow border rounded w-full py-2 px-3 leading-tight focus:outline-none");
+	pass_input.setAttribute("required", "");
+
 	const pass_error_wrapper = createDiv("h-2");
 	const pass_error = createSpan("", "pass-error-check", "text-red-500 animate-fade-in text-xs italic hidden");
 	
@@ -76,16 +73,15 @@ function renderRegisterForm()
 	email_div.appendChild(email_error_wrapper);
 	email_error_wrapper.appendChild(email_error);
 	
-	user_div.appendChild(user_label);
-	user_div.appendChild(user_input);
-	user_div.appendChild(user_error_wrapper);
-	user_error_wrapper.appendChild(user_error);
 	
 	pass_div.appendChild(pass_label);
 	pass_div.appendChild(pass_input);
-	pass_div.appendChild(pass_error_wrapper);
+
+	passrep_div.appendChild(passrep_input);
+
+	passrep_div.appendChild(pass_error_wrapper);
 	pass_error_wrapper.appendChild(pass_error);
-	pass_div.appendChild(pass_rules_div);
+	passrep_div.appendChild(pass_rules_div);
 	pass_rules_div.appendChild(pass_ul);
 	pass_ul.appendChild(pass_li1);
 	pass_ul.appendChild(pass_li2);
@@ -95,8 +91,8 @@ function renderRegisterForm()
 	butt_div.appendChild(register_button);
 	
 	form.appendChild(email_div);
-	form.appendChild(user_div);
 	form.appendChild(pass_div);
+	form.appendChild(passrep_div);
 	form.appendChild(butt_div);
 	
 	main_div.appendChild(form);

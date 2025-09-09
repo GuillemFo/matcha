@@ -24,10 +24,10 @@ function renderLoginForm()
 	const form = createForm("loginForm", "px-8 pt-6 pb-8 mb-4");
 	
 	///
-	const user_div = createDiv("mb-4 mt-2");
-	const user_label = createLab("Username", "user", "block text-blue font-bold mb-2");
-	const user_input = createInp("Username","text", "user", "user","box-blue text-gray-500 border rounded w-full py-2 px-3 leading-tight focus:outline-none");
-	user_input.setAttribute("required", "");
+	const email_div = createDiv("mb-4 mt-2");
+	const email_label = createLab("Email", "email", "block text-blue font-bold mb-2");
+	const email_input = createInp("Email","text", "email", "email","box-blue text-gray-500 border rounded w-full py-2 px-3 leading-tight focus:outline-none");
+	email_input.setAttribute("required", "");
 	
 	///
 	const pass_div = createDiv("mb-1");
@@ -40,7 +40,7 @@ function renderLoginForm()
 	const div_userfail_wrap = createDiv("mb-6 h-2 w-45 text-sm font-medium");
 	const div_userfail = createDiv("text-red-500 text-sm hidden animate-fade-in");
 	div_userfail.setAttribute("id", "userfail");
-	div_userfail.textContent = "Username or password incorrect";
+	div_userfail.textContent = "Email or password incorrect";
 	
 	///
 	const butt_div = createDiv("flex items-center justify-between mt-6 mb-2");
@@ -48,9 +48,9 @@ function renderLoginForm()
 	login_button.setAttribute("type", "submit");
 	
 	///
-	form.appendChild(user_div);
-	user_div.appendChild(user_label);
-	user_div.appendChild(user_input);
+	form.appendChild(email_div);
+	email_div.appendChild(email_label);
+	email_div.appendChild(email_input);
 	
 	///	
 	form.appendChild(pass_div);
