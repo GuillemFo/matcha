@@ -92,7 +92,7 @@ function renderEditForm(user:Profile)
 
 	//
 
-	const orientLabel = createLab(`Sexual preference: ${user?.orientation}`, "orient", " text-blue font-bold mb-2");
+	const orientLabel = createLab(`Sexual orientation: ${user?.orientation}`, "orient", " text-blue font-bold mb-2");
 	const orientSelect = createSelect("orient","box-blue text-gray-500 border rounded w-full py-2 px-3 leading-tight focus:outline-none mb-4",
 		[
 			{value: "0", text: ""},
