@@ -66,7 +66,7 @@
 .text-blue
 {
 	color: #00BBC9;
-	@apply text-xs px-2 text-center 
+	@apply text-xs px-2
 }
 
 .box-blue

@@ -1,20 +1,22 @@
 
-/// Just for testing
-
-
-
 export interface Profile
 {
 	id: string; //UUID?
-	email: string;
 	username: string;
-	name: string;
-	lastname: string;
-	gender?: 'male' | 'female' | 'non-binary' | 'not-specified';
-	preferences?: 'male' | 'female' | 'bisexual';
+	email: string;
+	first_name: string;
+	last_name: string;
+	gender?: string;
+	age?: string;
+	orientation?: string;
+	bio?: string;
+	fame_rating?: string;
+	gps_lat?: string;
+	gps_lon?: string;
+	location_optout?: boolean;
+	last_online?: string;
 	profpic?: string;
 	images?: string[];
-	bio?: string;
 	hashtags?: string[];
 }
 

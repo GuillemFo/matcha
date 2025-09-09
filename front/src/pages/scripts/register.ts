@@ -85,7 +85,7 @@ function renderRegisterForm()
 	const passRulesDiv = createDiv("mt-3 text-sm text-blue ");
 	passRulesDiv.textContent = "Password requirements:";
 	
-	const passRulesList = createUl("list-disc text-left list-inside pl-5 mt-1 text-xs");
+	const passRulesList = createUl("list-disc text-left list-outside pl-5 mt-1 text-xs");
 	const rule1 = createListItem("At least 7 characters", "");
 	const rule2 = createListItem("One letter", "");
 	const rule3 = createListItem("One number", "");
