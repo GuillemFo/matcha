@@ -38,8 +38,36 @@ function renderRegisterForm()
 	
 	const email_error_wrapper = createDiv("mb-1 h-4");
 	const email_error = createSpan("", "email-error-check", "text-red-500 animate-fade-in text-xs italic hidden");
+	//
+
+
+	const user_div = createDiv("mb-4");
+	const user_label = createLab("Username", "username", "block text-blue font-bold mb-2");
+	const user_input = createInp("example username", "text", "user", "username", "box-blue text-gray-500 border rounded w-full py-2 px-3 leading-tight focus:outline-none");
+	user_input.setAttribute("required", "");
 	
-		
+	const user_error_wrapper = createDiv("mb-1 h-4");
+	const user_error = createSpan("", "user-error-check", "text-red-500 text-xs animate-fade-in italic hidden");
+
+	//
+
+	const name_div = createDiv("mb-4");
+	const name_label = createLab("Name", "name", "block text-blue font-bold mb-2");
+	const name_input = createInp("example name", "text", "name", "name", "box-blue text-gray-500 border rounded w-full py-2 px-3 leading-tight focus:outline-none");
+	name_input.setAttribute("required", "");
+	
+	const name_error_wrapper = createDiv("mb-1 h-4");
+	const name_error = createSpan("", "name-error-check", "text-red-500 text-xs animate-fade-in italic hidden");
+
+	//
+	const lastname_div = createDiv("mb-4");
+	const lastname_label = createLab("Last name", "lastname", "block text-blue font-bold mb-2");
+	const lastname_input = createInp("example last name", "text", "lastname", "lastname", "box-blue text-gray-500 border rounded w-full py-2 px-3 leading-tight focus:outline-none");
+	lastname_input.setAttribute("required", "");
+	
+	const lastname_error_wrapper = createDiv("mb-1 h-4");
+	const lastname_error = createSpan("", "lastname-error-check", "text-red-500 text-xs animate-fade-in italic hidden");
+
 	//
 	const pass_div = createDiv("");
 	const pass_label = createLab("Password", "password", "block text-blue font-bold mb-2");
@@ -47,20 +75,21 @@ function renderRegisterForm()
 	pass_input.setAttribute("required", "");
 	
 
-	const passrep_div = createDiv("");
-	const passrep_input = createInp("repeat password", "password", "pass", "password", "box-blue text-gray-500 shadow border rounded w-full py-2 px-3 leading-tight focus:outline-none");
+	const passrep_div = createDiv("mt-2");
+	const passrep_input = createInp("repeat password", "password", "pass2", "password2", "box-blue text-gray-500 shadow border rounded w-full py-2 px-3 leading-tight focus:outline-none");
 	pass_input.setAttribute("required", "");
 
 	const pass_error_wrapper = createDiv("h-2");
 	const pass_error = createSpan("", "pass-error-check", "text-red-500 animate-fade-in text-xs italic hidden");
 	
-	const pass_rules_div = createDiv("mt-4 text-sm font-medium text-blue");
-	pass_rules_div.textContent = "Password must contain:";
-	const pass_ul = createUl("list-disc list-inside text-xs text-blue");
-	const pass_li1 = createListItem("At least 7 characters", "");
-	const pass_li2 = createListItem("One letter", "");
-	const pass_li3 = createListItem("One number", "");
-	const pass_li4 = createListItem("One special character (!@#$%^&*)", "");
+	const passRulesDiv = createDiv("mt-3 text-sm text-blue ");
+	passRulesDiv.textContent = "Password requirements:";
+	
+	const passRulesList = createUl("list-disc text-left list-inside pl-5 mt-1 text-xs");
+	const rule1 = createListItem("At least 7 characters", "");
+	const rule2 = createListItem("One letter", "");
+	const rule3 = createListItem("One number", "");
+	const rule4 = createListItem("One special character (!@#$%^&*)", "");
 	
 	//
 	const butt_div = createDiv("flex items-center justify-between mt-6 mb-2");
@@ -72,7 +101,22 @@ function renderRegisterForm()
 	email_div.appendChild(email_input);
 	email_div.appendChild(email_error_wrapper);
 	email_error_wrapper.appendChild(email_error);
+
+
+	user_div.appendChild(user_label);
+	user_div.appendChild(user_input);
+	user_div.appendChild(user_error_wrapper);
+	user_error_wrapper.appendChild(user_error);
+
+	name_div.appendChild(name_label);
+	name_div.appendChild(name_input);
+	name_div.appendChild(name_error_wrapper);
+	name_error_wrapper.appendChild(name_error);
 	
+	lastname_div.appendChild(lastname_label);
+	lastname_div.appendChild(lastname_input);
+	lastname_div.appendChild(lastname_error_wrapper);
+	lastname_error_wrapper.appendChild(lastname_error);
 	
 	pass_div.appendChild(pass_label);
 	pass_div.appendChild(pass_input);
@@ -81,16 +125,19 @@ function renderRegisterForm()
 
 	passrep_div.appendChild(pass_error_wrapper);
 	pass_error_wrapper.appendChild(pass_error);
-	passrep_div.appendChild(pass_rules_div);
-	pass_rules_div.appendChild(pass_ul);
-	pass_ul.appendChild(pass_li1);
-	pass_ul.appendChild(pass_li2);
-	pass_ul.appendChild(pass_li3);
-	pass_ul.appendChild(pass_li4);
+	passrep_div.appendChild(passRulesDiv);
+	passRulesDiv.appendChild(passRulesList);
+	passRulesList.appendChild(rule1);
+	passRulesList.appendChild(rule2);
+	passRulesList.appendChild(rule3);
+	passRulesList.appendChild(rule4);
 	
 	butt_div.appendChild(register_button);
 	
 	form.appendChild(email_div);
+	form.appendChild(user_div);
+	form.appendChild(name_div);
+	form.appendChild(lastname_div);
 	form.appendChild(pass_div);
 	form.appendChild(passrep_div);
 	form.appendChild(butt_div);
